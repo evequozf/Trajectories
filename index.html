@@ -44,10 +44,10 @@ text {
 <script src="lib/jquery-2.1.4.min.js"></script>
 <script>
 
-var width = 1000,
-	height = 1800,
+var years = d3.range(1998,2015),
+	width = 1000,
+	height = 600 * years.length,
 	t = {},
-	years = [2013, 2014, 2015],
 	space = 600,
 	distortion = 2,
 	top = 5
@@ -132,7 +132,7 @@ var layout = function(data_n, data_l, n, l, i, trajs, period ) {
 
 // core
 
-d3.json("data/dhlab.json", function(error, data) { 
+d3.json("data/florian-dhlab.json", function(error, data) { 
 	
 	if (error) throw error
 
